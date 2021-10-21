@@ -1,11 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+
+import CovidNews from "./components/CovidNews";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import '../src/index.css'
+import Navbars from "./components/Navbars";
+
 
 function App() {
   return (
-    <div>
-    
-    </div>
+    <>
+      <Navbars />
+      <div>
+        <Home />
+        <Header />
+       
+      <CovidNews />
+      </div>
+
+      
+    </>
   );
 }
 
