@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import {Row,Col,Card,} from 'react-bootstrap';
-
+// import date from 'date-and-time';
 
 class CovidNews extends Component {
 
@@ -69,7 +69,7 @@ class CovidNews extends Component {
       const {newsData, images} = this.state;
       console.log(newsData);
       console.log(images);
-      // const dog = newsData.map(d => )
+
 
     return (
       <div className="container">

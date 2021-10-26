@@ -50,6 +50,7 @@ class Home extends Component {
     
     return (
       <div>
+      
         <Form.Select value={state} onChange={this.selectChange} size="sm">
           <option value="null">PICK A STATE</option>
           {
@@ -61,7 +62,7 @@ class Home extends Component {
           {newValue.length > 0 ? <p>{newValue[0].active}</p> : <p></p>}
 
         </div>
-     
+        
       </div>
     )
   }
