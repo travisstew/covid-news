@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import {Row,Col,Card,} from 'react-bootstrap';
+
 // import date from 'date-and-time';
 
 class CovidNews extends Component {
@@ -18,18 +19,10 @@ class CovidNews extends Component {
   
 
   componentDidMount(){
-    var options = {
-      method: 'GET',
-      url: 'https://coronavirus-smartable.p.rapidapi.com/news/v1/US/',
-      headers: {
-        'x-rapidapi-host': 'coronavirus-smartable.p.rapidapi.com',
-        'x-rapidapi-key': '00b956d7c8msh458ab8d1c20369dp182f31jsn413e2da1e3e2'
-      }
-    };
-    axios.request(options).then(response => {
-      // console.log(response.data.news[0].images[0].url);
-     
-        var articleImg = [];
+
+    axios.get('http://localhost:5000/api/news').then(response=>{
+           console.log(response);
+      var articleImg = [];
 
         for(let i =0; i < response.data.news.length; i++){
             if(response.data.news[i].images === null ){
@@ -45,11 +38,14 @@ class CovidNews extends Component {
         this.setState({
           newsData: response.data.news,
           images: articleImg
-        })
+        });
         
+
+
     }).catch( error=> {
       console.error(error);
     });
+
   }
 
  ConvertUTCTimeToLocalTime = (UTCDateString)=>{
@@ -84,7 +80,7 @@ class CovidNews extends Component {
         <Card.Img variant="top" src={images[idx]} />
         <Card.Body>
           <Card.Title>{d.title}</Card.Title>
-          <a href={d.webUrl} target="_blank">  <Card.Text>
+          <a href={d.webUrl} target="_blank" rel="noreferrer" >  <Card.Text>
                 This is a longer card with supporting text below as a natural
                 lead-in to additional content. This content is a little bit longer.
               </Card.Text>
@@ -100,6 +96,7 @@ class CovidNews extends Component {
 
       {/* <NewsCards news = {newsData} img = {images} /> */}
       </div>
+
     )
   }
 }

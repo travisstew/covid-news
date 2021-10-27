@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/travisstew/covid-news#readme",
   "dependencies": {
+    "axios": "^0.24.0",
     "concurrently": "^6.3.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
