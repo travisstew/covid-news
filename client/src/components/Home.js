@@ -19,7 +19,7 @@ class Home extends Component {
     }
 
     componentDidMount(){
-      axios.get('https://disease.sh/v3/covid-19/states?sort=United%20States&yesterday=United%20States&allowNull=United%20States').then(res =>{
+      axios.get('http://localhost:5000/api/stats').then(res =>{
         console.log(res.data);
         this.setState({
           covidData: res.data,

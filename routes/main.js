@@ -3,15 +3,7 @@ const router = express.Router();
 const Axios = require('axios');
 
 
-// router.get('/api/customers', function(req,res){
-//     const customers = [
-//       {
-//         id:1,
-//         firstName:'travis'
-//       }
-//     ];
-//     res.json(customers);
-// });
+//api for covidNews component
 router.get('/api/news', (req,res) =>{
   Axios({
     method: 'get', 
@@ -24,6 +16,14 @@ router.get('/api/news', (req,res) =>{
      res.send(result.data)
      
   });
+});
+//api for stats on covid data 
+router.get('/api/stats', (req,res)=>{
+    Axios.get('https://disease.sh/v3/covid-19/states?sort=United%20States&yesterday=United%20States&allowNull=United%20States').then(function (response) {
+      // handle success
+      // console.log(response.data);
+      res.send(response.data);
+    })
 });
 
 module.exports = router;
