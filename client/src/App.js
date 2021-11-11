@@ -1,24 +1,22 @@
-
-import CovidNews from "./components/CovidNews";
-import Header from "./components/Header";
-// import Home from "./components/Home";
-import '../src/index.css'
-import Navbars from "./components/Navbars";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import HomePage from "./components/HomePage";
 
 
 function App() {
   return (
-    <>
-      <Navbars />
-      <div>
-        {/* <Home /> */}
-        <Header />
-       
-      <CovidNews />
-      </div>
+      <>
+   <Router basename="/" >
 
+      <Routes>
+        <Route exact path="/" element={<HomePage />}/> 
+
+      </Routes>
+
+   
       
-    </>
+   
+  </Router>
+      </>
   );
 }
 

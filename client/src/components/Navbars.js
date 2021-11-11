@@ -5,11 +5,11 @@ import Nav from 'react-bootstrap/Nav'
 
 function Navbars() {
   return (
-  
+
 <>
   <Navbar bg="" >
     <Container>
-    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+    <Navbar.Brand href="#home">Covid Statitics</Navbar.Brand>
     <Nav className="me-auto">
 
 

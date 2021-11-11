@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-// import covidImage from '../images/covid-image-removebg-preview.png';
 import Form from 'react-bootstrap/Form';
 
 
@@ -59,7 +58,19 @@ class Home extends Component {
         </Form.Select>
 
         <div>
-          {newValue.length > 0 ? <p>{newValue[0].active}</p> : <p></p>}
+          {newValue.length > 0 ?
+          
+         <div className="statistics">
+           <ul>
+            <li>Active: {newValue[0].active}</li> 
+            <li>Cases:  {newValue[0].cases}</li> 
+            <li>Today Cases:  {newValue[0].todayCases}</li> 
+            <li>Deaths: {newValue[0].deaths}</li> 
+            <li>tests: {newValue[0].tests}</li>
+           </ul>
+      
+         </div>
+           : <p></p>}
 
         </div>
         
