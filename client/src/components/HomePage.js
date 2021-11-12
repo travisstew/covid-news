@@ -3,7 +3,7 @@ import Navbars from './Navbars';
 import Header from './Header';
 import CovidNews from './CovidNews';
 import Footer from './Footer';
-// import '../src/index.css';
+import '../../src/index.css'
 
 
 function HomePage() {
