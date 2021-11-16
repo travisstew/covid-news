@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const { send } = require('process');
 // const cookieParser = require('cookie-parser');
 
 
@@ -15,6 +16,13 @@ app.use(express.json());
 
 //routes
 app.use('/', require('./routes/main'));
+
+if(process.env.NODE_ENV === "production"){
+  app.use(express.static('client/build'));
+  app.get('*', (req,res)=>{
+    send.sendFile(path.join(__dirname), 'client','build','index.html')
+  })
+}
 
 app.listen(PORT,function () { 
   console.log('listening on port ' + PORT);
