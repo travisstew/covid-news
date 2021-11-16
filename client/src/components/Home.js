@@ -62,11 +62,11 @@ class Home extends Component {
           
          <div className="statistics">
            <ul>
-            <li>Active: {newValue[0].active}</li> 
-            <li>Cases:  {newValue[0].cases}</li> 
-            <li>Today Cases:  {newValue[0].todayCases}</li> 
-            <li>Deaths: {newValue[0].deaths}</li> 
-            <li>tests: {newValue[0].tests}</li>
+            <li><b>Active:</b> {newValue[0].active}</li> 
+            <li><b>Cases:</b>   {newValue[0].cases}</li> 
+            <li><b>Today Cases:</b>   {newValue[0].todayCases}</li> 
+            <li><b>Deaths:</b>  {newValue[0].deaths}</li> 
+            <li><b>tests:</b> {newValue[0].tests}</li>
            </ul>
       
          </div>

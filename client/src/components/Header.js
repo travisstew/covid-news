@@ -8,7 +8,7 @@ function Header() {
         <div className='container'> 
       <div className="row">  
           <div className="col-md-4  my-auto">
-              <h1>Latest statitics and data on Covid-19 </h1>
+              <h1>Latest Statitics and Data on Covid-19 </h1>
               <p className="header-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perspiciatis perferendis consectetur ipsam, repellendus ea molestiae eveniet aperiam accusamus animi nam dolores itaque vitae ex nemo debitis, quo officiis reiciendis?</p> 
              <Home />
               

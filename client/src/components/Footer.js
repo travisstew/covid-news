@@ -9,23 +9,23 @@ function Footer() {
     <>
        <section className="footer">
           <div className="social">
-              <a href=""><FaInstagram/></a>
-              <a href=""><FaTwitter/></a>
-              <a href=""><FaFacebook/></a>
-              <a href=""><FaFacebook/></a>
+              <a href="/"><FaInstagram/></a>
+              <a href="/"><FaTwitter/></a>
+              <a href="/"><FaFacebook/></a>
+              <a href="/"><FaFacebook/></a>
           </div>
           <ul>
             <li>
-              <a href="">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="">Services</a>
+              <a href="/">Services</a>
             </li>
             <li>
-              <a href="">About</a>
+              <a href="/">About</a>
             </li>
             <li>
-              <a href="">Privacy Policy</a>
+              <a href="/">Privacy Policy</a>
             </li>
           </ul>
           <p className="copyright">

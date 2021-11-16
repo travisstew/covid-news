@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import {Row,Col,Card,} from 'react-bootstrap';
+import Spinner from 'react-bootstrap/Spinner'
 
 // import date from 'date-and-time';
 
@@ -92,7 +93,7 @@ class CovidNews extends Component {
   ))}
 </Row>
 </div> )
-: <p>no data</p>}
+: <p><Spinner animation="grow" /></p>}
 
       {/* <NewsCards news = {newsData} img = {images} /> */}
       </div>
