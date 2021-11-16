@@ -20,7 +20,7 @@ app.use('/', require('./routes/main'));
 if(process.env.NODE_ENV === "production"){
   app.use(express.static('client/build'));
   app.get('*', (req,res)=>{
-    send.sendFile(path.join(__dirname), 'client','build','index.html')
+    res.sendFile(path.join(__dirname), 'client','build','index.html')
   })
 }
 
