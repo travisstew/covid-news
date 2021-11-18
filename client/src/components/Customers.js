@@ -10,7 +10,7 @@ class Customers extends Component {
   }
   
   componentDidMount(){
-    fetch('http://localhost:5000/api/customers').then(res => res.json()).then(customers => this.setState({customers}, () =>console.log(customers)));
+    fetch('http://localhost:5000/api/customers').then(res => res.json()).then(customers => this.setState({customers}));
   }
   render() {
     return (

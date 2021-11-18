@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-// const { send } = require('process');
 const cookieParser = require('cookie-parser');
 
 

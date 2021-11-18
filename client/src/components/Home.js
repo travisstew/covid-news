@@ -19,7 +19,6 @@ class Home extends Component {
 
     componentDidMount(){
       axios.get('http://localhost:5000/api/stats').then(res =>{
-        console.log(res.data);
         this.setState({
           covidData: res.data,
         })

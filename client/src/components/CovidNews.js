@@ -4,8 +4,6 @@ import axios from 'axios';
 import {Row,Col,Card,} from 'react-bootstrap';
 import Spinner from 'react-bootstrap/Spinner'
 
-// import date from 'date-and-time';
-
 class CovidNews extends Component {
 
 
@@ -22,7 +20,7 @@ class CovidNews extends Component {
   componentDidMount(){
 
     axios.get('http://localhost:5000/api/news').then(response=>{
-           console.log(response);
+           
       var articleImg = [];
 
         for(let i =0; i < response.data.news.length; i++){
@@ -40,9 +38,6 @@ class CovidNews extends Component {
           newsData: response.data.news,
           images: articleImg
         });
-        
-
-
     }).catch( error=> {
       console.error(error);
     });
@@ -50,23 +45,19 @@ class CovidNews extends Component {
   }
 
  ConvertUTCTimeToLocalTime = (UTCDateString)=>{
- var convertdLocalTime = new Date(UTCDateString);
-
-      var hourOffset = convertdLocalTime.getTimezoneOffset() / 60;
-
+    var convertdLocalTime = new Date(UTCDateString);
+    var hourOffset = convertdLocalTime.getTimezoneOffset() / 60;
+    
       convertdLocalTime.setHours( convertdLocalTime.getHours() + hourOffset ); 
 
       return convertdLocalTime;
- };
+  };
   
      
   
 
   render() {
       const {newsData, images} = this.state;
-      console.log(newsData);
-      console.log(images);
-
 
     return (
       <div className="container">
@@ -95,7 +86,7 @@ class CovidNews extends Component {
 </div> )
 : <p><Spinner animation="grow" /></p>}
 
-      {/* <NewsCards news = {newsData} img = {images} /> */}
+  
       </div>
 
     )

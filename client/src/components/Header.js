@@ -14,7 +14,7 @@ function Header() {
               
           </div>
            <div className='col-md-8 text-center'>
-              {/* <img src={covidImage} alt="covid cell " /> */}
+              
               <img className="image-fluid" src="https://images.cnbctv18.com/wp-content/uploads/2021/04/covid-24-1019x573.jpg?impolicy=website&width=500px&height=300px" alt="" />
            </div>
         
